@@ -1,166 +1,130 @@
-# AstroPaper 📄
+# DevCarmelo
 
-![AstroPaper](public/default-og.jpg)
-[![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/community/file/1356898632249991861)
-![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![GitHub](https://img.shields.io/github/license/satnaing/astro-paper?color=%232F3741&style=for-the-badge)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white&style=for-the-badge)](https://conventionalcommits.org)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=for-the-badge)](http://commitizen.github.io/cz-cli/)
+Blog personal de [Carmelo](https://devcarmelo.github.io/), creado con Astro y basado en el tema AstroPaper. El sitio publica artículos y tutoriales sobre Linux, Debian y otros temas técnicos.
 
-AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro blog theme. This theme is designed and crafted based on [my personal blog](https://satnaing.dev/blog).
+**Sitio:** https://devcarmelo.github.io/blog/
 
-Read [the blog posts](https://astro-paper.pages.dev/posts/) or check [the README Documentation Section](#-documentation) for more info.
+## Características
 
-## 🔥 Features
+- Contenido escrito en Markdown o MDX.
+- Interfaz en español.
+- Modo claro y oscuro.
+- Buscador estático con Pagefind.
+- Tabla de contenidos en los artículos.
+- RSS, sitemap y páginas de archivos.
+- Etiquetas y paginación.
+- Imagen Open Graph dinámica.
+- Diseño adaptable y optimizado para el rendimiento.
 
-- [x] type-safe markdown
-- [x] super fast performance
-- [x] accessible (Keyboard/VoiceOver)
-- [x] responsive (mobile ~ desktops)
-- [x] SEO-friendly
-- [x] light & dark mode
-- [x] static search ([Pagefind](https://pagefind.app/))
-- [x] draft posts & pagination
-- [x] sitemap & rss feed
-- [x] MDX support
-- [x] table of contents beside posts
-- [x] followed best practices
-- [x] highly customizable
-- [x] dynamic OG image generation for blog posts ([Blog Post](https://astro-paper.pages.dev/posts/dynamic-og-image-generation-in-astropaper-blog-posts/))
-- [x] i18n ready
+## Tecnologías
 
-_Note: I've tested screen-reader accessibility of AstroPaper using **VoiceOver** on Mac and **TalkBack** on Android. I couldn't test all other screen-readers out there. However, accessibility enhancements in AstroPaper should be working fine on others as well._
+- [Astro](https://astro.build/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Pagefind](https://pagefind.app/)
+- [pnpm](https://pnpm.io/)
+- [GitHub Actions](https://github.com/features/actions)
+- [GitHub Pages](https://pages.github.com/)
 
-## ✅ Lighthouse Score
+## Requisitos
 
-<p align="center">
-  <a href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fastro-paper.pages.dev%2F&form_factor=desktop">
-    <img width="710" alt="AstroPaper Lighthouse Score" src="AstroPaper-lighthouse-score.svg">
-  </a>
-</p>
+- Node.js 24 o una versión compatible
+- pnpm 11
 
-## 🚀 Project Structure
+## Desarrollo local
 
-Inside of AstroPaper, you'll see the following folders and files:
+Instala las dependencias:
 
 ```bash
-/
-├── public/
-│   ├── pagefind/          # auto-generated on build
-│   ├── favicon.svg
-│   └── default-og.jpg
-├── src/
-│   ├── assets/
-│   │   ├── icons/
-│   │   └── images/
-│   ├── components/
-│   ├── content/
-│   │   ├── pages/
-│   │   │   └── about.md
-│   │   └── posts/
-│   │       └── some-blog-posts.md
-│   ├── i18n/
-│   ├── layouts/
-│   ├── pages/
-│   ├── scripts/
-│   ├── styles/
-│   ├── types/
-│   ├── utils/
-│   ├── config.ts
-│   └── content.config.ts
-├── astro-paper.config.ts  # user-defined configurations
-└── astro.config.ts
-```
-
-All blog posts are stored in the `src/content/posts/` directory. You can organise posts into subdirectories — the subdirectory name becomes part of the post URL.
-
-## 📖 Documentation
-
-Documentation can be read in two formats\_ _markdown_ & _blog post_.
-
-- Configuration - [markdown](src/content/posts/how-to-configure-astropaper-theme.md) | [blog post](https://astro-paper.pages.dev/posts/how-to-configure-astropaper-theme/)
-- Add Posts - [markdown](src/content/posts/adding-new-post.md) | [blog post](https://astro-paper.pages.dev/posts/adding-new-posts-in-astropaper-theme/)
-- Customize Color Schemes - [markdown](src/content/posts/customizing-astropaper-theme-color-schemes.md) | [blog post](https://astro-paper.pages.dev/posts/customizing-astropaper-theme-color-schemes/)
-- Predefined Color Schemes - [markdown](src/content/posts/predefined-color-schemes.md) | [blog post](https://astro-paper.pages.dev/posts/predefined-color-schemes/)
-
-## 💻 Tech Stack
-
-**Main Framework** - [Astro](https://astro.build/)  
-**Type Checking** - [TypeScript](https://www.typescriptlang.org/)  
-**Styling** - [TailwindCSS](https://tailwindcss.com/)  
-**UI/UX** - [Figma Design File](https://www.figma.com/community/file/1356898632249991861)  
-**Static Search** - [Pagefind](https://pagefind.app/)  
-**Icons** - [Tablers](https://tabler-icons.io/)  
-**Code Formatting** - [Prettier](https://prettier.io/)  
-**Deployment** - [Cloudflare Pages](https://pages.cloudflare.com/)  
-**Linting** - [ESLint](https://eslint.org)  
-**Dynamic OG images** - [Satori](https://github.com/vercel/satori) + [Sharp](https://sharp.pixelplumbing.com/) + [Astro Fonts](https://docs.astro.build/en/guides/fonts/)
-
-## 👨🏻‍💻 Running Locally
-
-You can start using this project locally by running the following command in your desired directory:
-
-```bash
-# pnpm
-pnpm create astro@latest --template satnaing/astro-paper
-
-# npm
-npm create astro@latest -- --template satnaing/astro-paper
-
-# yarn
-yarn create astro --template satnaing/astro-paper
-
-# bun
-bun create astro@latest -- --template satnaing/astro-paper
-```
-
-Then start the project by running the following commands:
-
-```bash
-# install dependencies if you haven't done so in the previous step.
 pnpm install
+```
 
-# start running the project
+Inicia el servidor de desarrollo:
+
+```bash
 pnpm dev
 ```
 
-## Google Site Verification (optional)
+El sitio estará disponible en `http://localhost:4321/blog/`.
 
-You can add your [Google Site Verification HTML tag](https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag) by setting `site.googleVerification` in `astro-paper.config.ts`:
+## Comandos disponibles
 
-```ts file="astro-paper.config.ts"
-export default defineAstroPaperConfig({
-  site: {
-    // ...
-    googleVerification: "your-google-site-verification-value",
-  },
-  // ...
-});
-```
+Ejecuta estos comandos desde la raíz del proyecto:
 
-> See [this discussion](https://github.com/satnaing/astro-paper/discussions/334#discussioncomment-10139247) for adding AstroPaper to the Google Search Console.
+| Comando             | Acción                                                                                            |
+| :------------------ | :------------------------------------------------------------------------------------------------ |
+| `pnpm install`      | Instala las dependencias.                                                                         |
+| `pnpm dev`          | Inicia el servidor de desarrollo.                                                                 |
+| `pnpm build`        | Comprueba tipos, genera el sitio, crea el índice Pagefind y copia el índice a `public/pagefind/`. |
+| `pnpm preview`      | Sirve localmente la compilación generada.                                                         |
+| `pnpm sync`         | Genera los tipos de Astro.                                                                        |
+| `pnpm lint`         | Ejecuta ESLint sobre el proyecto.                                                                 |
+| `pnpm format:check` | Comprueba el formato con Prettier.                                                                |
+| `pnpm format`       | Aplica el formato con Prettier.                                                                   |
 
-## 🧞 Commands
+## Crear un artículo
 
-All commands are run from the root of the project, from a terminal:
+Los artículos se encuentran en `src/content/posts/`. Cada archivo debe incluir información básica en el encabezado YAML:
 
-| Command          | Action                                                                                                                           |
-| :--------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| `pnpm install`   | Installs dependencies                                                                                                            |
-| `pnpm dev`       | Starts local dev server at `localhost:4321`                                                                                      |
-| `pnpm build`     | Type-checks, builds the site, runs Pagefind indexing, and copies the index to `public/pagefind/`                                 |
-| `pnpm preview`   | Preview your build locally, before deploying                                                                                     |
-| `pnpm sync`      | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
-| `pnpm astro ...` | Run CLI commands like `astro add`, `astro check`                                                                                 |
-
-## ✨ Feedback & Suggestions
-
-If you have any suggestions/feedback, you can contact me via [my email](mailto:satnaingdev+astropaper@gmail.com). Alternatively, feel free to open an issue if you find bugs or want to request new features.
-
-## 📜 License
-
-Licensed under the MIT License, Copyright © 2026
-
+```md
+---
+title: Título del artículo
+author: Carmelo
+pubDatetime: 2026-11-22T14:36:53Z
+featured: false
+draft: false
+tags:
+  - Linux
+  - tutorial
+description: Resumen breve del artículo.
 ---
 
-Made with 🤍 by [Sat Naing](https://satnaing.dev) 👨🏻‍💻 and [contributors](https://github.com/satnaing/astro-paper/graphs/contributors).
+Contenido del artículo...
+```
+
+Durante el desarrollo puedes asignar `draft: true` para excluir temporalmente una entrada de la versión publicada.
+
+## Estructura del proyecto
+
+```text
+/
+├── public/                 # Recursos públicos e índice generado por Pagefind
+├── src/
+│   ├── assets/             # Imágenes e iconos
+│   ├── components/         # Componentes reutilizables de Astro
+│   ├── content/
+│   │   ├── pages/          # Páginas Markdown
+│   │   └── posts/          # Artículos del blog
+│   ├── i18n/               # Traducciones y formatos
+│   ├── layouts/            # Plantillas de página y artículo
+│   ├── pages/              # Rutas del sitio
+│   ├── styles/             # Estilos globales
+│   └── utils/              # Utilidades
+├── astro-paper.config.ts   # Configuración del sitio
+├── astro.config.ts         # Configuración de Astro
+├── compose.yaml            # Entorno de desarrollo con Docker Compose
+└── Dockerfile              # Compilación y servidor nginx
+```
+
+## Docker
+
+El entorno de desarrollo también puede ejecutarse con Docker Compose:
+
+```bash
+docker compose up
+```
+
+El servidor quedará publicado en `http://localhost:4321`.
+
+Para generar una imagen de producción con nginx:
+
+```bash
+docker build -t devcarmelo-blog .
+docker run --rm -p 8080:80 devcarmelo-blog
+```
+
+La imagen servirá el resultado de la compilación en `http://localhost:8080`.
+
+## Despliegue
+
+El repositorio utiliza GitHub Actions para construir y publicar el sitio en GitHub Pages. El flujo de despliegue se ejecuta automáticamente al subir cambios a la rama `master`, y también puede iniciarse manualmente desde la pestaña **Actions**.
