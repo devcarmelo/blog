@@ -52,7 +52,7 @@ export default defineConfig({
       ],
     }),
     shikiConfig: {
-      themes: { light: "min-light", dark: "night-owl" },
+      themes: { light: "min-light", dark: "github-dark-dimmed" },
       defaultColor: false,
       wrap: false,
       transformers: [

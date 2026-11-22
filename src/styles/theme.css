@@ -7,28 +7,37 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
-  --font-app: var(--font-google-sans-code);
+  --font-app: ui-sans-serif, system-ui, sans-serif;
+  --font-code: var(--font-google-sans-code);
 }
 
 /* Light theme values */
 :root,
 [data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
+  --background: #f1f0ec;
+  --foreground: #252a30;
+  --accent: #225c80;
   --accent-foreground: #ffffff;
-  --muted: #e6e6e6;
-  --muted-foreground: #6b7280;
-  --border: #ece9e9;
+  --muted: #e6e8e8;
+  --muted-foreground: #56616c;
+  --border: #808a94;
+  --diff-add-foreground: #166534;
+  --diff-add-background: color-mix(in srgb, #22c55e 14%, transparent);
+  --diff-remove-foreground: #991b1b;
+  --diff-remove-background: color-mix(in srgb, #ef4444 12%, transparent);
 }
 
 /* Dark theme values */
 [data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --accent-foreground: #ffffff;
-  --muted: #343f60;
-  --muted-foreground: #afb9ca;
-  --border: #ab4b08;
+  --background: #292f37;
+  --foreground: #e8ebef;
+  --accent: #a6cdea;
+  --accent-foreground: #20262d;
+  --muted: #363d46;
+  --muted-foreground: #bbc4ce;
+  --border: #6f7a86;
+  --diff-add-foreground: #86efac;
+  --diff-add-background: color-mix(in srgb, #22c55e 18%, transparent);
+  --diff-remove-foreground: #fca5a5;
+  --diff-remove-background: color-mix(in srgb, #ef4444 18%, transparent);
 }

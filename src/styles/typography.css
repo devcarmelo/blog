@@ -13,22 +13,21 @@
       @apply text-foreground mb-3;
     }
 
-    h3 {
-      @apply italic;
-    }
-
     p,
     strong,
     ol,
     ul,
-    figcaption,
     table,
     code {
       @apply text-foreground;
     }
 
+    figcaption {
+      @apply text-muted-foreground;
+    }
+
     a {
-      @apply text-foreground hover:text-accent wrap-break-word decoration-dashed underline-offset-4 focus-visible:no-underline;
+      @apply text-accent decoration-accent/50 hover:decoration-accent wrap-break-word underline underline-offset-4 focus-visible:no-underline;
     }
 
     ul {
@@ -53,10 +52,6 @@
       &:focus-visible {
         @apply outline-2 outline-offset-2 outline-dashed;
       }
-    }
-
-    figcaption {
-      @apply opacity-75;
     }
 
     table {
@@ -94,7 +89,7 @@
     }
 
     code {
-      @apply bg-muted/75 text-foreground rounded p-1 wrap-break-word before:content-none after:content-none;
+      @apply font-code bg-muted text-foreground rounded-sm p-1 wrap-break-word before:content-none after:content-none;
     }
 
     .astro-code code {
@@ -102,7 +97,7 @@
     }
 
     blockquote {
-      @apply border-s-accent/80 wrap-break-word opacity-80;
+      @apply border-s-accent/80 wrap-break-word;
     }
 
     details:not(.callout) {
@@ -120,7 +115,7 @@
 
   /* ===== Code Blocks & Syntax Highlighting ===== */
   .astro-code {
-    @apply outline-border flex border bg-(--shiki-light-bg) text-(--shiki-light) [&_span]:text-(--shiki-light);
+    @apply font-code outline-border flex border bg-(--shiki-light-bg) text-(--shiki-light) [&_span]:text-(--shiki-light);
   }
 
   html[data-theme="dark"] .astro-code {
@@ -131,10 +126,22 @@
   /* https://shiki.style/packages/transformers */
   .astro-code {
     .line.diff.add {
-      @apply relative inline-block w-full bg-green-400/20 before:absolute before:-left-3 before:text-green-500 before:content-['+'];
+      @apply relative inline-block w-full before:absolute before:-left-3 before:content-['+'];
+      background-color: var(--diff-add-background);
+      color: var(--diff-add-foreground);
+
+      &::before {
+        color: var(--diff-add-foreground);
+      }
     }
     .line.diff.remove {
-      @apply relative inline-block w-full bg-red-500/20 before:absolute before:-left-3 before:text-red-500 before:content-['-'];
+      @apply relative inline-block w-full before:absolute before:-left-3 before:content-['-'];
+      background-color: var(--diff-remove-background);
+      color: var(--diff-remove-foreground);
+
+      &::before {
+        color: var(--diff-remove-foreground);
+      }
     }
     .line.highlighted {
       @apply inline-block w-full bg-slate-400/20;
