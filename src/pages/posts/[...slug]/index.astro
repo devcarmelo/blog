@@ -9,7 +9,6 @@ import { getPostSlug, getPostUrl } from "@/utils/getPostPaths";
 import { getSortedPosts } from "@/utils/getSortedPosts";
 import { slugifyStr } from "@/utils/slugify";
 import EditPost from "./_components/EditPost.astro";
-import ShareLinks from "./_components/ShareLinks.astro";
 import BackButton from "./_components/BackButton.astro";
 import BackToTopButton from "./_components/BackToTopButton.astro";
 import AdjacentPostNav from "./_components/AdjacentPostNav.astro";
@@ -152,19 +151,11 @@ const ogImage = ogImageUrl
 
     <BackToTopButton headings={tocHeadings} />
 
-    <div class="sm:my-8 sm:flex sm:items-start sm:justify-between sm:gap-8">
-      <div class="mt-4 mb-8 flex items-start justify-between gap-4 sm:my-0">
-        <ul class="flex flex-wrap gap-4">
-          {
-            tags.map(tag => (
-              <Tag tag={slugifyStr(tag)} tagName={tag} size="sm" />
-            ))
-          }
-        </ul>
-        <EditPost class="flex-none sm:hidden" {hideEditPost} {post} />
-      </div>
-
-      <ShareLinks />
+    <div class="mt-4 mb-8 flex items-start gap-4 sm:my-8">
+      <ul class="flex flex-wrap gap-4">
+        {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} size="sm" />)}
+      </ul>
+      <EditPost class="flex-none sm:hidden" {hideEditPost} {post} />
     </div>
 
     <PostEnd {post} />
