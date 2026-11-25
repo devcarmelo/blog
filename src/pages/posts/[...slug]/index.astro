@@ -139,7 +139,7 @@ const ogImage = ogImageUrl
         id="article"
         class:list={[
           "w-full",
-          "app-prose max-w-app",
+          "app-prose",
           "prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)",
         ]}
       >
@@ -237,7 +237,7 @@ const ogImage = ogImageUrl
         : "-top-3";
 
       const copyButton = document.createElement("button");
-      copyButton.className = `copy-code absolute end-3 ${topClass} rounded bg-muted border border-muted px-2 py-1 text-xs leading-4 text-foreground font-medium`;
+      copyButton.className = `copy-code absolute end-3 ${topClass} min-h-8 rounded border border-border/80 bg-background/95 px-2 text-[0.7rem] leading-4 text-foreground font-medium opacity-85 transition-opacity hover:opacity-100 focus-visible:opacity-100`;
       copyButton.innerHTML = copyButtonLabel;
       codeBlock.setAttribute("tabindex", "0");
       codeBlock.appendChild(copyButton);

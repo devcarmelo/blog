@@ -21,7 +21,7 @@ const variantClasses = {
 <div
   data-table-variant={variant}
   class:list={[
-    "overflow-hidden [&_table]:my-0 [&_table]:min-w-xl",
+    "max-w-full overflow-hidden [&_table]:my-0 [&_table]:min-w-xl",
     variant === "minimal" && variantClasses.minimal,
     variant === "striped" && variantClasses.striped,
     variant === "striped-minimal" &&
@@ -31,7 +31,7 @@ const variantClasses = {
 >
   <div
     tabindex="0"
-    class="outline-accent relative w-full overflow-x-auto focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-dashed"
+    class="outline-accent relative w-full max-w-full overflow-x-auto overscroll-x-contain focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-dashed"
   >
     <slot />
   </div>
