@@ -7,6 +7,7 @@ export default defineAstroPaperConfig({
     description: "Artículos y tutoriales de Carmelo.",
     author: "Carmelo",
     ogImage: "og.png",
+    googleVerification: "xz3rjPUNer6Vrjhhd7p2vccLZjp1q6c5Ncf0bZOFf6E",
     lang: "es",
     timezone: "UTC",
     dir: "ltr",
